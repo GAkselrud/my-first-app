@@ -6,9 +6,14 @@
                 <li>Add a paragraph with any content of your choice (e.g "Secret Password + tuna")</li>
                 <li>Toggle the displaying of that paragraph with the button created in the first step
                 <li>Log all the button clicks in an array and ouput that array below the secret para</li>
-                <li>Starting at the 5th log item, give all the future log items a blue bachground (via ngStyle) and 
+                <li>Starting at the 5th log item, give all the future log items a blue background (via ngStyle) and
                     white color (ngClass)</li>
             </ol>
+            <hr>
+            <button class="btn btn-primary" (click)="showSecret = !showSecret">Toggle Displays</button>
+            <p *ngIf="showSecret">Secret Password = tuna</p>
+            <div *ngfor="let logItem of log" [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}">
+                {{ logItem }}</div>
         </div>
     </div>
-</div>
+</div>  
