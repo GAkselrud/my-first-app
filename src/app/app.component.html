@@ -10,10 +10,10 @@
                     white color (ngClass)</li>
             </ol>
             <hr>
-            <button class="btn btn-primary" (click)="showSecret = !showSecret">Toggle Displays</button>
+            <button class="btn btn-primary" (click)="onToggleDetails()">Toggle Display</button>
             <p *ngIf="showSecret">Secret Password = tuna</p>
-            <div *ngfor="let logItem of log" [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}">
+            <div *ngFor="let logItem of log" [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}">
                 {{ logItem }}</div>
         </div>
     </div>
-</div>  
+</div>
